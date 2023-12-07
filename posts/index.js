@@ -9,6 +9,7 @@ const PORT = 4000;
 const app = express();
 app.use(bodyParser.json());
 
+// mocking db
 const posts = {};
 
 app.get("/posts", (req, res) => {

@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get("/posts/:id/comments", (req, res) => {
-    res.send(commentsByPostId[req.body.id] || []);
+    res.send(commentsByPostId[req.params.id] || []);
 });
 
 app.post("/posts/:id/comments", (req, res) => {

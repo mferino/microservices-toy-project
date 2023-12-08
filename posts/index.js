@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
+const cors = require("cors");
 
 // constants
 const PORT = 4000;
@@ -8,6 +9,7 @@ const PORT = 4000;
 // init app
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 // mocking db
 const posts = {};
